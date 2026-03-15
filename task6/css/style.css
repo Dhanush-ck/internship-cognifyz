@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+    --h1-space: 0.7em;
+}
+
+html{
+    font-size: clamp(56.25%, 1vw, 62.5%);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d6baa3;
+}
+
+.container-element {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e6d4c7;
+    margin: 4em 0;
+    border-radius: 2em;
+    width: min(90%, 650px);
+    gap: 2rem;
+}
+
+.container-element h1 {
+    font-size: clamp(2.6rem, 3vw, 8rem);
+    font-weight: 900;
+    margin: var(--h1-space) 0 0 ;
+}
+
+#username, #password {
+    width: max(70%, 300px);
+    font-size: clamp(1.4rem, 1.2vw, 2rem);
+    padding: 0.3em;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.error {
+    font-size: clamp(1.4rem, 0.8vw, 1.8rem);
+    color: red;
+}
+
+#submit {
+    width: max(70%, 300px);
+    padding: 5px;
+    background-color: #d6baa3;
+    border-radius: 0.5rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 0.7em;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0 0 2em 0;
+
+    &:hover {
+        background-color: #e6cab3;
+    }
+}
